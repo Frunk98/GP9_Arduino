@@ -38,6 +38,8 @@ Elige la versión del IDE según el sistema operativo.
 
 __**Comparación entre las direcciones que marca la datasheet contra como funcionan en la práctica**__
 
+A continuación, se presenta una comparación entre las direcciones hexadecimales de cada registro y las variables asociadas, contrastando su disposición original con la forma en que deben ser utilizadas para Arduino:
+
 <div style="display: flex; flex-direction: column; align-items: center;">
     <!-- Primera imagen con pie de imagen -->
     <div style="margin-bottom: 20px;">

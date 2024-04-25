@@ -15,6 +15,6 @@ Permite ajustar la frecuencia de actualización de los datos de los sensores, el
 
 *Frecuencia de datos*
 
-![Frecuencias](https://github.com/Frunk98/GP9_Arduino/upload)
+![Frecuencias](https://github.com/Frunk98/GP9_Arduino/blob/main/FR.png)
 
 

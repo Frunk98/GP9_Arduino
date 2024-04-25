@@ -46,8 +46,7 @@ __**NOTA**__
         <p style="text-align: center;">Datasheet</p>
     </div>
 </div>
-<pre><code>
-void GP9::save() {
+<pre><code>void GP9::save() {
   switch (address) {
     <span class="highlight">
     case DREG_HEALTH :
@@ -85,6 +84,5 @@ void GP9::save() {
             break;
         }
     </span>
-}
-</code></pre>
+}</code></pre>
 

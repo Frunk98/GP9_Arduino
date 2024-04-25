@@ -46,7 +46,6 @@ __**NOTA**__
         <p style="text-align: center;">Datasheet</p>
     </div>
 </div>
-<pre>
 <code>
 void GP9::save() {
   switch (address) {
@@ -82,4 +81,3 @@ void GP9::save() {
         }
     }
 </code>
-</pre>

@@ -15,10 +15,10 @@ Permite ajustar la frecuencia de actualización de los datos de los sensores, el
 
 *Frecuencia de datos*
 
-![Frecuencias]()
+![Frecuencias](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/FR.png)
 
 **Arduino IDE** (https://github.com/Frunk98/GP9_Arduino/blob/main/FR.png)
 
 Elige la versión del IDE según el sistema operativo.
 
-![SO](https://github.com/Frunk98/GP9_Arduino/blob/main/ard.png)
+![SO](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/ard.png)

@@ -1,12 +1,12 @@
 #include "GP94.h"
 #include "arduino.h"
 
-  //////////////////////////////////////////
- //       READ FUNCTIONS FOR THE GP9     //
+//////////////////////////////////////////
+//       READ FUNCTIONS FOR THE GP9     //
 //////////////////////////////////////////
 
 /*
-  Default constructor. ial state and serial port, pass as reference
+  Default constructor. Initializes state and serial port, passed as reference.
 */
 GP9::GP9(HardwareSerial &serial) { 
   state = STATE_ZERO;
@@ -17,7 +17,7 @@ GP9::GP9(HardwareSerial &serial) {
   The function that decodes and parses incoming data from the GP9. 
   The function will determine which register is being read, the batch length, and call checksum once finished.
   current_byte is current byte being read by serial.
-  decode() returns true if a packet was read succesfully (if checksum returns true).
+  decode() returns true if a packet was read successfully (if checksum returns true).
 */
 bool GP9::decode(byte current_byte) {
 
@@ -83,15 +83,16 @@ bool GP9::decode(byte current_byte) {
     return false;
   }
 }
+
 /*
   Checksum is used as a backcheck by the GP9 to ensure the correct packet was read.
   This function ties directly with decode() and calls save() if the checksum matches the parsed data.
-  checksum() returns true if a packet is read succesfully.
+  checksum() returns true if a packet is read successfully.
 */
 bool GP9::checksum() {
   checksum10 = ((checksum1 << 8) | checksum0);  // Combine checksum1 and checksum0
   computed_checksum = 's' + 'n' + 'p' + packet_type + address;
-  for (int i = 0; i < data_length; i++) { // computed_checksum can only be 16bits long (2B)
+  for (int i = 0; i < data_length; i++) { // computed_checksum can only be 16 bits long (2 bytes)
     computed_checksum += data[i];
   }
   if (checksum10 == computed_checksum) {
@@ -103,87 +104,87 @@ bool GP9::checksum() {
 }
 
 /*
-  The list of 'readable' registers by the GP9. Assigns the data[] variable to whatever dataset is beign read.
+  The list of 'readable' registers by the GP9. Assigns the data[] variable to whatever dataset is being read.
   The function switches for each register case.
 */
 void GP9::save() {
   switch (address) {
 
-	case DREG_HEALTH :
-      	{
-        	sats_used = (uint8_t)((data[0] & 0xFC) >> 2);
-        	hdop = (uint16_t)(((data[0] & 0x03) << 8) | data[1]);
-        	sats_in_view = (uint8_t)((data[2] & 0xFC) >> 2);
-       		ovf = (uint8_t)((data[2] >> 1) & 0x01);
-        	gps_st = (uint8_t)((data[3] & 0x60) >> 5);
-        	press = (uint8_t)((data[3] >> 4) & 0x01);
-        	accel = (uint8_t)((data[3] >> 3) & 0x01);
-        	gyro = (uint8_t)((data[3] >> 2) & 0x01);
-        	mag = (uint8_t)((data[3] >> 1) & 0x01);
-        	gps = (uint8_t)(data[3] & 0x01);
+    case DREG_HEALTH :
+        {
+          sats_used = (uint8_t)((data[0] & 0xFC) >> 2);
+          hdop = (uint16_t)(((data[0] & 0x03) << 8) | data[1]);
+          sats_in_view = (uint8_t)((data[2] & 0xFC) >> 2);
+          ovf = (uint8_t)((data[2] >> 1) & 0x01);
+          gps_st = (uint8_t)((data[3] & 0x60) >> 5);
+          press = (uint8_t)((data[3] >> 4) & 0x01);
+          accel = (uint8_t)((data[3] >> 3) & 0x01);
+          gyro = (uint8_t)((data[3] >> 2) & 0x01);
+          mag = (uint8_t)((data[3] >> 1) & 0x01);
+          gps = (uint8_t)(data[3] & 0x01);
 
-	    break;	
-	}
-    	
+        break;  
+    }
+      
         case DREG_GYRO_RAW_XY:
         {
-        	gyro_raw_x = ((int16_t)data[0] << 8) + ((int16_t)data[1] << 8);
-        	gyro_raw_y = ((int16_t)data[2] << 8) + ((int16_t)data[3] << 8);
-        	gyro_raw_z = ((int16_t)data[4] << 8) + ((int16_t)data[5] << 8);
-		gyro_raw_time = read_register_as_float(6);
+          gyro_raw_x = ((int16_t)data[0] << 8) + ((int16_t)data[1] << 8);
+          gyro_raw_y = ((int16_t)data[2] << 8) + ((int16_t)data[3] << 8);
+          gyro_raw_z = ((int16_t)data[4] << 8) + ((int16_t)data[5] << 8);
+          gyro_raw_time = read_register_as_float(6);
 
             break;
         }
 
         case DREG_ACCEL_RAW_XY:
         {
-            	accel_raw_x = ((int16_t)data[0] << 8) + ((int16_t)data[1] << 8);
-            	accel_raw_y = ((int16_t)data[2] << 8) + ((int16_t)data[3] << 8);
-            	accel_raw_z = ((int16_t)data[4] << 8) + ((int16_t)data[5] << 8);
-	    	accel_raw_time = read_register_as_float(6);
+              accel_raw_x = ((int16_t)data[0] << 8) + ((int16_t)data[1] << 8);
+              accel_raw_y = ((int16_t)data[2] << 8) + ((int16_t)data[3] << 8);
+              accel_raw_z = ((int16_t)data[4] << 8) + ((int16_t)data[5] << 8);
+          accel_raw_time = read_register_as_float(6);
 
             break;
         }
 
-	case DREG_GYRO_PROC_X:
-	{
-		gyro_x = read_register_as_float(0);
-      		gyro_y = read_register_as_float(4);
-      		gyro_z = read_register_as_float(8);
-      		gyro_time = read_register_as_float(12);
+    case DREG_GYRO_PROC_X:
+    {
+      gyro_x = read_register_as_float(0);
+          gyro_y = read_register_as_float(4);
+          gyro_z = read_register_as_float(8);
+          gyro_time = read_register_as_float(12);
 
             break;
-    	} 
-  
-	case DREG_ACCEL_PROC_X:
+      } 
+
+    case DREG_ACCEL_PROC_X:
         {
-      		accel_x = read_register_as_float(0);
-      		accel_y = read_register_as_float(4);
-      		accel_z = read_register_as_float(8);
-      		accel_time = read_register_as_float(12);
+          accel_x = read_register_as_float(0);
+          accel_y = read_register_as_float(4);
+          accel_z = read_register_as_float(8);
+          accel_time = read_register_as_float(12);
 
             break;
         }
 
-	case DREG_QUAT_AB:
-	{
-        	quat_a = (uint16_t)((data[0]<<8) | data[1]);
-		quat_b = (uint16_t)((data[2]<<8) | data[3]);
-        	quat_c = (uint16_t)((data[4]<<8) | data[5]);
-		quat_d = (uint16_t)((data[6]<<8) | data[7]);
-		quat_time = read_register_as_float(20);
+    case DREG_QUAT_AB:
+    {
+          quat_a = (uint16_t)((data[0]<<8) | data[1]);
+      quat_b = (uint16_t)((data[2]<<8) | data[3]);
+          quat_c = (uint16_t)((data[4]<<8) | data[5]);
+      quat_d = (uint16_t)((data[6]<<8) | data[7]);
+      quat_time = read_register_as_float(20);
 
             break;
-    	} 
+      } 
 
-  	case DREG_EULER_PHI_THETA:
-	{
-      		roll  = (int16_t)((data[0]<<8) | data[1]) / 91.02222;
-      		pitch = (int16_t)((data[2]<<8) | data[3]) / 91.02222;
-      		yaw   = (int16_t)((data[4]<<8) | data[5]) / 91.02222;
+    case DREG_EULER_PHI_THETA:
+    {
+          roll  = (int16_t)((data[0]<<8) | data[1]) / 91.02222;
+          pitch = (int16_t)((data[2]<<8) | data[3]) / 91.02222;
+          yaw   = (int16_t)((data[4]<<8) | data[5]) / 91.02222;
 
-    	    break;
-	}
+          break;
+    }
 
   case DREG_GPS_LATITUDE : //0x84 (132)
     if (packet_is_batch) {
@@ -193,12 +194,12 @@ void GP9::save() {
     }
   break;
 
-  	case DREG_GPS_SPEED:
-    	{
-      		speed = read_register_as_float(0);
+    case DREG_GPS_SPEED:
+      {
+          speed = read_register_as_float(0);
 
-  	   break;
-    	}
+         break;
+      }
    }
 }
 

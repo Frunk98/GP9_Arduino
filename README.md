@@ -36,10 +36,9 @@ Elige la versión del IDE según el sistema operativo.
 
 ## __**NOTA**__
 
-
+__**Comparación entre las direcciones que marca la datasheet contra como funcionan en la práctica**__
 
 <div style="display: flex; flex-direction: column; align-items: center;">
-    <h2>Comparación entre las direcciones que marca la datasheet contra como funcionan en la práctica</h2>
     <!-- Primera imagen con pie de imagen -->
     <div style="margin-bottom: 20px;">
         <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/datas.png" alt="Datasheet" style="width: 600px;" />

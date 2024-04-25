@@ -26,3 +26,15 @@ Permite ajustar la frecuencia de actualización de los datos de los sensores, el
 Elige la versión del IDE según el sistema operativo.
 
 ![SO](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/ard.png)
+
+## Instalaciones necesarias 
+
+**Redshift Serial Interface**
+La interface del fabricante solo se descomprime y se instala sin ningún paso adicional. Para conectar la GP9 por UBS puede utilizarse cualquier un adaptador de UBS a TTL (https://a.co/d/9Ex6gT6)
+
+**Arduino IDE*
+Para instalar el IDE de Arduino solo sigue los pasos indicados en la página oficial (https://www.arduino.cc/en/software)
+
+**Librerías GP9**
+Para instalar las librerías comprime el CPP y el Header en un ZIP y sigue las instrucciones del siguiente tutorial para agregarlas --> (https://www.youtube.com/watch?v=CK1THPvw77M&t=343s) 
+

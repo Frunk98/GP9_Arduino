@@ -46,4 +46,45 @@ __**NOTA**__
         <p style="text-align: center;">Datasheet</p>
     </div>
 </div>
+<pre style="background-color: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto;">
+void GP9::save() {
+  switch (address) {
+
+    case DREG_HEALTH :
+        {
+          sats_used = (uint8_t)((data[0] & 0xFC) >> 2);
+          hdop = (uint16_t)(((data[0] & 0x03) << 8) | data[1]);
+          sats_in_view = (uint8_t)((data[2] & 0xFC) >> 2);
+          ovf = (uint8_t)((data[2] >> 1) & 0x01);
+          gps_st = (uint8_t)((data[3] & 0x60) >> 5);
+          press = (uint8_t)((data[3] >> 4) & 0x01);
+          accel = (uint8_t)((data[3] >> 3) & 0x01);
+          gyro = (uint8_t)((data[3] >> 2) & 0x01);
+          mag = (uint8_t)((data[3] >> 1) & 0x01);
+          gps = (uint8_t)(data[3] & 0x01);
+
+        break;  
+    }
+      
+        case DREG_GYRO_RAW_XY:
+        {
+          gyro_raw_x = ((int16_t)data[0] << 8) + ((int16_t)data[1] << 8);
+          gyro_raw_y = ((int16_t)data[2] << 8) + ((int16_t)data[3] << 8);
+          gyro_raw_z = ((int16_t)data[4] << 8) + ((int16_t)data[5] << 8);
+          gyro_raw_time = read_register_as_float(6);
+
+            break;
+        }
+
+        case DREG_ACCEL_RAW_XY:
+        {
+              accel_raw_x = ((int16_t)data[0] << 8) + ((int16_t)data[1] << 8);
+              accel_raw_y = ((int16_t)data[2] << 8) + ((int16_t)data[3] << 8);
+              accel_raw_z = ((int16_t)data[4] << 8) + ((int16_t)data[5] << 8);
+          accel_raw_time = read_register_as_float(6);
+
+            break;
+        }
+}
+</pre>
 

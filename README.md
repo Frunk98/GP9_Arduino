@@ -49,7 +49,6 @@ __**NOTA**__
 ```ruby
 void GP9::save() {
   switch (address) {
-```
     case DREG_HEALTH :
         {
           <span style="color: blue;">sats_used</span> = (uint8_t)((data[0] & 0xFC) >> 2);
@@ -81,3 +80,4 @@ void GP9::save() {
             break;
         }
     }
+```

@@ -46,15 +46,15 @@ __**NOTA**__
         <div style="width: 300px; margin-right: 20px;">
             <!-- Primera imagen con pie de imagen -->
             <div style="margin-bottom: 20px;">
-                <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/datas.png" alt="Datasheet" style="max-width: 100%; height: auto;" />
-                <p style="text-align: center; margin-top: 10px;">Pie de la imagen 1: Datasheet</p>
+                <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/datas.png" alt="Datasheet" style="max-width: 10%; height: auto;" />
+                <p style="text-align: center; margin-top: 10px;">Datasheet</p>
             </div>
         </div>
         <div style="width: 300px;">
             <!-- Segunda imagen con pie de imagen -->
             <div style="margin-bottom: 20px;">
-                <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/var.png" alt="Biblioteca" style="max-width: 100%; height: auto;" />
-                <p style="text-align: center; margin-top: 10px;">Pie de la imagen 2: Biblioteca</p>
+                <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/var.png" alt="Biblioteca" style="max-width: 10%; height: auto;" />
+                <p style="text-align: center; margin-top: 10px;">Biblioteca</p>
             </div>
         </div>
     </div>

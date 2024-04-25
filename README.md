@@ -38,4 +38,4 @@ Elige la versión del IDE según el sistema operativo.
 
 __**NOTA**__
 
-Los
+Las direcciones hex. de los registros son las mismas de la datasheet (https://github.com/Frunk98/GP9_Arduino/blob/main/Docs/GP9_datasheet.pdf), sin embargo las variables de los directorios no, 

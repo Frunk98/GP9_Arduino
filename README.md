@@ -46,8 +46,7 @@ __**NOTA**__
         <p style="text-align: center;">Datasheet</p>
     </div>
 </div>
-<pre style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; overflow-x: auto; background-color: white;">
-<code style="font-size: 14px; font-family: monospace; color: #333;">
+```ruby
 void GP9::save() {
   switch (address) {
 
@@ -87,5 +86,4 @@ void GP9::save() {
             break;
         }
 }
-</code>
-</pre>
+```

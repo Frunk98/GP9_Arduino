@@ -24,7 +24,7 @@ Elige la versión del IDE según el sistema operativo.
 
 ![SO](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/ard.png)
 
-## Instalaciones necesarias 
+## Instrucciones de instalación
 
 - **Redshift Serial Interface**: La interfaz del fabricante solo se descomprime y se instala sin ningún paso adicional. Para conectar la GP9 por USB, puede utilizarse cualquier adaptador de USB a TTL. Puedes encontrar uno [aquí](https://a.co/d/9Ex6gT6).
 

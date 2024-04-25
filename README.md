@@ -39,3 +39,19 @@ Elige la versión del IDE según el sistema operativo.
 __**NOTA**__
 
 Las direcciones hex. de los registros son las mismas de la datasheet (https://github.com/Frunk98/GP9_Arduino/blob/main/Docs/GP9_datasheet.pdf), sin embargo las variables de los directorios no, 
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <h2>Comparación</h2>
+    <!-- Primera imagen con pie de imagen -->
+    <div style="margin-bottom: 20px;">
+        <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/datas.png" alt="Datasheet" style="max-width: 100%;" />
+        <p style="text-align: center;">Pie de la imagen 1: Datasheet</p>
+    </div>
+    <!-- Segunda imagen con pie de imagen -->
+    <div style="margin-bottom: 20px;">
+        <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/var.png" alt="Biblioteca" style="max-width: 100%;" />
+        <p style="text-align: center;">Pie de la imagen 2: Biblioteca</p>
+    </div>
+    <!-- Pie de imagen general -->
+    <p style="text-align: center;">Comparación</p>
+</div>
+

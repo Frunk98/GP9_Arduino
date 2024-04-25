@@ -47,6 +47,7 @@ __**NOTA**__
     </div>
 </div>
 <code style="font-size: 14px; font-family: monospace; color: #333;">
+```ruby
 void GP9::save() {
   switch (address) {
     case DREG_HEALTH :
@@ -80,4 +81,5 @@ void GP9::save() {
             break;
         }
     }
+ ```
 </code>

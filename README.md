@@ -43,7 +43,7 @@ __**NOTA**__
     <!-- Primera imagen con pie de imagen -->
     <div style="margin-bottom: 20px;">
         <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/datas.png" alt="Datasheet" style="width: 600px;" />
-        <p style="text-align: center;">Datasheet</p>
+        <p style="text-align: center;">Datasheet con las direcciones originales</p>
     </div>
 </div>
 <br>
@@ -87,4 +87,5 @@ __**NOTA**__
         }
     </span>
 }</code></pre>
+<p style="text-align: center;">Código con las direcciones corregidas</p>
 

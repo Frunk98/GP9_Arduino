@@ -49,7 +49,7 @@ __**NOTA**__
 ```ruby
 void GP9::save() {
   switch (address) {
-
+```
     case DREG_HEALTH :
         {
           <span style="color: blue;">sats_used</span> = (uint8_t)((data[0] & 0xFC) >> 2);
@@ -62,28 +62,22 @@ void GP9::save() {
           <span style="color: blue;">gyro</span> = (uint8_t)((data[3] >> 2) & 0x01);
           <span style="color: blue;">mag</span> = (uint8_t)((data[3] >> 1) & 0x01);
           <span style="color: blue;">gps</span> = (uint8_t)(data[3] & 0x01);
-
         break;  
     }
-      
         case DREG_GYRO_RAW_XY:
         {
           <span style="color: blue;">gyro_raw_x</span> = ((int16_t)data[0] << 8) + ((int16_t)data[1] << 8);
           <span style="color: blue;">gyro_raw_y</span> = ((int16_t)data[2] << 8) + ((int16_t)data[3] << 8);
           <span style="color: blue;">gyro_raw_z</span> = ((int16_t)data[4] << 8) + ((int16_t)data[5] << 8);
           <span style="color: blue;">gyro_raw_time</span> = read_register_as_float(6);
-
             break;
         }
-
         case DREG_ACCEL_RAW_XY:
         {
               <span style="color: blue;">accel_raw_x</span> = ((int16_t)data[0] << 8) + ((int16_t)data[1] << 8);
               <span style="color: blue;">accel_raw_y</span> = ((int16_t)data[2] << 8) + ((int16_t)data[3] << 8);
               <span style="color: blue;">accel_raw_z</span> = ((int16_t)data[4] << 8) + ((int16_t)data[5] << 8);
           <span style="color: blue;">accel_raw_time</span> = read_register_as_float(6);
-
             break;
         }
-}
-```
+    }

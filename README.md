@@ -5,4 +5,8 @@ Bibliotecas de Arduino y sofware necesario para la IMU GP9 AHRS de CHRobotics
 
 Este software permite la conexión entre el dispositivo GP9 y la PC mediante serial (Es necesario un convertidor de USB a TTL) 
 
-Permite ajustar los rates de los datos al mismo tiempo que permite la calibración de algunos sensores.
+![Interfaz gráfica](https://raw.githubusercontent.com/Frunk98/GP9_Arduino/main/RS.png)
+
+Permite ajustar la frecuencia de actualización de los datos de los sensores, el Baudrate para la comunicación entre el dispositivo y la computadora, así como algunas calibraciónes. 
+
+

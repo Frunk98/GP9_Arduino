@@ -47,7 +47,6 @@ __**NOTA**__
     </div>
 </div>
 <br>
-<br>
 <pre><code>void GP9::save() {
   switch (address) {
     <span class="highlight">

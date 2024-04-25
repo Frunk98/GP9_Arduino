@@ -40,19 +40,7 @@ __**NOTA**__
 
 <p style="text-align: center; margin-top: 20px;">Las direcciones hexadecimales de los registros son las mismas que las de la datasheet (<a href="https://github.com/Frunk98/GP9_Arduino/blob/main/Docs/GP9_datasheet.pdf" target="_blank">ver datasheet</a>), sin embargo, las variables de los directorios no coinciden.</p>
 
-<div style="display: flex; flex-direction: column; align-items: center;">
-    <h2>Comparación</h2>
-    <!-- Primera imagen con pie de imagen -->
-    <div style="margin-bottom: 20px;">
-        <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/datas.png" alt="Datasheet" style="width: 600px;" />
-        <p style="text-align: center;">Datasheet</p>
-    </div>
-    <!-- Segunda imagen con pie de imagen -->
-    <div style="margin-bottom: 20px;">
-        <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/var.png" alt="Biblioteca" style="width: 600px;" />
-        <p style="text-align: center;">Biblioteca</p>
-    </div>
-</div>
+
 
 
 

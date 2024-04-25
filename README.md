@@ -40,7 +40,26 @@ __**NOTA**__
 
 <p style="text-align: center; margin-top: 20px;">Las direcciones hexadecimales de los registros son las mismas que las de la datasheet (<a href="https://github.com/Frunk98/GP9_Arduino/blob/main/Docs/GP9_datasheet.pdf" target="_blank">ver datasheet</a>), sin embargo, las variables de los directorios no coinciden.</p>
 
-
+<div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+    <h2 style="margin-bottom: 20px;">Comparación</h2>
+    <div style="display: flex;">
+        <div style="width: 300px; margin-right: 20px;">
+            <!-- Primera imagen con pie de imagen -->
+            <div style="margin-bottom: 20px;">
+                <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/datas.png" alt="Datasheet" style="max-width: 100%; height: auto;" />
+                <p style="text-align: center; margin-top: 10px;">Pie de la imagen 1: Datasheet</p>
+            </div>
+        </div>
+        <div style="width: 300px;">
+            <!-- Segunda imagen con pie de imagen -->
+            <div style="margin-bottom: 20px;">
+                <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/var.png" alt="Biblioteca" style="max-width: 100%; height: auto;" />
+                <p style="text-align: center; margin-top: 10px;">Pie de la imagen 2: Biblioteca</p>
+            </div>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 20px;">Las direcciones hexadecimales de los registros son las mismas que las de la datasheet (<a href="https://github.com/Frunk98/GP9_Arduino/blob/main/Docs/GP9_datasheet.pdf" target="_blank">link a la datasheet</a>), sin embargo, las variables de los directorios no.</p>
+</div>
 
 
 

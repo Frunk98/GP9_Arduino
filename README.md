@@ -34,9 +34,9 @@ Elige la versión del IDE según el sistema operativo.
 
 - **Librerías GP9**: Para instalar las librerías, comprime los archivos disponibles [aquí](https://github.com/Frunk98/GP9_Arduino/tree/main/GP9-modificados) en un archivo ZIP. Luego, sigue las instrucciones del siguiente tutorial para agregarlas: [Tutorial de instalación de librerías en Arduino](https://www.youtube.com/watch?v=CK1THPvw77M&t=343s).
 
-## Ejemplos
+## __**NOTA**__
 
-__**NOTA**__
+
 
 <div style="display: flex; flex-direction: column; align-items: center;">
     <h2>Comparación</h2>
@@ -89,3 +89,5 @@ __**NOTA**__
 <p style="text-align: center;">Código con las direcciones corregidas</p>
 <br>
 <p>Se adjuntan también las bibliotecas originales. Las encontré en un repositorio para el sensor UM7, pero ya no sé cuál es. Si tú las escribiste y estás leyendo esto, contáctame para darte crédito. Puedes encontrarlas en este enlace: <a href="https://github.com/Frunk98/GP9_Arduino">GP9-Originales</a>. Las bibliotecas modificadas solo contienen los directorios y variables necesarias para mi proyecto.</p>
+
+## Ejemplos

@@ -1,5 +1,5 @@
 # GP9 Arduino
-Bibliotecas de Arduino para IMU GP9 AHRS de CHRobotics
+Bibliotecas de Arduino y sofware necesario para la IMU GP9 AHRS de CHRobotics
 ## Software necesario 
 **Redshift Serial Interface** (https://www.pololu.com/file/0J1934/SerialInterface_V3-1-5_8-08-2018.zip)
 Este software permite la conexión entre el dispositivo GP9 y la PC mediante serial (Es necesario un convertidor de USB a TTL) 

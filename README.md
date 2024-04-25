@@ -9,4 +9,6 @@ Este software permite la conexión entre el dispositivo GP9 y la PC mediante ser
 
 Permite ajustar la frecuencia de actualización de los datos de los sensores, el Baudrate para la comunicación entre el dispositivo y la computadora, así como algunas calibraciónes. 
 
+![Baudrates](https://github.com/Frunk98/GP9_Arduino/blob/main/rs2.png)
+
 

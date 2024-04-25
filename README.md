@@ -1,43 +1,33 @@
 # GP9 Arduino
-Bibliotecas de Arduino y sofware necesario para la IMU GP9 AHRS de CHRobotics
+Bibliotecas de Arduino y software necesario para la IMU GP9 AHRS de CHRobotics.
+
 ## Software necesario 
-**Redshift Serial Interface** (https://www.pololu.com/file/0J1934/SerialInterface_V3-1-5_8-08-2018.zip)
+- **Redshift Serial Interface**: [Descargar aquí](https://www.pololu.com/file/0J1934/SerialInterface_V3-1-5_8-08-2018.zip)
 
-Este software permite la conexión entre el dispositivo GP9 y la PC mediante serial (Es necesario un convertidor de USB a TTL) 
+Este software permite la conexión entre el dispositivo GP9 y la PC mediante serial (Es necesario un convertidor de USB a TTL). Permite ajustar la frecuencia de actualización de los datos de los sensores, el Baudrate para la comunicación entre el dispositivo y la computadora, así como algunas calibraciones.
 
-![Interfaz gráfica](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/RS.png)
+    *Baudrates*
 
-Permite ajustar la frecuencia de actualización de los datos de los sensores, el Baudrate para la comunicación entre el dispositivo y la computadora, así como algunas calibraciónes. 
+    ![Baudrates](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/rs2.png)
 
-*Baudrates*
+    *Frecuencia de datos*
 
-![Baudrates](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/rs2.png)
+    ![Frecuencias](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/FR.png)
 
-*Frecuencia de datos*
+    *Calibración*
 
-![Frecuencias](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/FR.png)
+    ![Calibración](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/cal.png)
 
-*Calibración*
-
-![Calibración](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/cal.png)
-
-**Arduino IDE** (https://github.com/Frunk98/GP9_Arduino/blob/main/FR.png)
+- **Arduino IDE**: [Descargar aquí](https://github.com/Frunk98/GP9_Arduino/blob/main/FR.png)
 
 Elige la versión del IDE según el sistema operativo.
 
-![SO](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/ard.png)
+    ![SO](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/ard.png)
 
 ## Instalaciones necesarias 
 
-**Redshift Serial Interface**
+- **Redshift Serial Interface**: La interfaz del fabricante solo se descomprime y se instala sin ningún paso adicional. Para conectar la GP9 por USB, puede utilizarse cualquier adaptador de USB a TTL. Puedes encontrar uno [aquí](https://a.co/d/9Ex6gT6).
 
-La interface del fabricante solo se descomprime y se instala sin ningún paso adicional. Para conectar la GP9 por UBS puede utilizarse cualquier un adaptador de UBS a TTL (https://a.co/d/9Ex6gT6)
+- **Arduino IDE**: Para instalar el IDE de Arduino, sigue los pasos indicados en la [página oficial](https://www.arduino.cc/en/software).
 
-**Arduino IDE*
-
-Para instalar el IDE de Arduino solo sigue los pasos indicados en la página oficial (https://www.arduino.cc/en/software)
-
-**Librerías GP9**
-
-Para instalar las librerías comprime el CPP y el Header en un ZIP y sigue las instrucciones del siguiente tutorial para agregarlas --> (https://www.youtube.com/watch?v=CK1THPvw77M&t=343s) 
-
+- **Librerías GP9**: Para instalar las librerías, comprime el archivo CPP y el Header en un ZIP y sigue las instrucciones del siguiente tutorial para agregarlas: [Tutorial de instalación de librerías en Arduino](https://www.youtube.com/watch?v=CK1THPvw77M&t=343s).

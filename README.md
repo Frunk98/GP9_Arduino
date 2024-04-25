@@ -44,16 +44,14 @@ __**NOTA**__
     <h2>Comparación</h2>
     <!-- Primera imagen con pie de imagen -->
     <div style="margin-bottom: 20px;">
-        <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/datas.png" alt="Datasheet" style="width: 300px;" />
-        <p style="text-align: center;">Pie de la imagen 1: Datasheet</p>
+        <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/datas.png" alt="Datasheet" style="width: 600px;" />
+        <p style="text-align: center;">Datasheet</p>
     </div>
     <!-- Segunda imagen con pie de imagen -->
     <div style="margin-bottom: 20px;">
-        <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/var.png" alt="Biblioteca" style="width: 300px;" />
-        <p style="text-align: center;">Pie de la imagen 2: Biblioteca</p>
+        <img src="https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/var.png" alt="Biblioteca" style="width: 600px;" />
+        <p style="text-align: center;">Biblioteca</p>
     </div>
-    <!-- Pie de imagen general -->
-    <p style="text-align: center;">Comparación</p>
 </div>
 
 

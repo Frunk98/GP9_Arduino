@@ -46,7 +46,8 @@ __**NOTA**__
         <p style="text-align: center;">Datasheet</p>
     </div>
 </div>
-<pre style="background-color: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto;">
+<pre style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; overflow-x: auto;">
+<code style="color: #333; font-size: 14px; font-family: monospace;">
 void GP9::save() {
   switch (address) {
 
@@ -86,5 +87,5 @@ void GP9::save() {
             break;
         }
 }
+</code>
 </pre>
-

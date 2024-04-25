@@ -11,11 +11,11 @@ Permite ajustar la frecuencia de actualización de los datos de los sensores, el
 
 *Baudrates*
 
-![Baudrates](https://github.com/Frunk98/GP9_Arduino/blob/main/rs2.png)
+![Baudrates](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/rs2.png)
 
 *Frecuencia de datos*
 
-![Frecuencias](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/rs2.png)
+![Frecuencias]()
 
 **Arduino IDE** (https://github.com/Frunk98/GP9_Arduino/blob/main/FR.png)
 

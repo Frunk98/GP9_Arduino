@@ -137,3 +137,6 @@ Se mandan a llamar las variables colocando el objeto imu. antes de cada variable
 Serial.print(imu.gyro_y); 
 Serial.println(imu.gyro_z);        
 </code></pre>
+
+<p>La lista completa de variables se encuentra disponible <a href="https://github.com/Frunk98/GP9_Arduino/blob/main/GP9-original/GP94.cpp">aquí</a>(Para revisar cuales son las variables que si lee el sensor checar la datasheet ).</p>
+

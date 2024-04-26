@@ -140,3 +140,8 @@ Serial.println(imu.gyro_z);
 
 __**<p>La lista completa de variables se encuentra disponible <a href="https://github.com/Frunk98/GP9_Arduino/blob/main/GP9-original/GP94.cpp">aquí</a>. Para revisar cuáles son las variables que efectivamente lee el sensor, consulta la <a href="https://github.com/Frunk98/GP9_Arduino/blob/main/Docs/GP9_datasheet.pdf">datasheet</a>.</p>**__
 
+## Resultados
+
+Como se puede apreciar en la imagen se leen los datos del giroscopio en los 3 ejes, una lectura por segundo.
+
+![Resultados](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/Res.png)

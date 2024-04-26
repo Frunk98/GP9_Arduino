@@ -91,13 +91,15 @@ A continuación, se presenta una comparación entre las direcciones hexadecimale
 
 ## Ejemplos
 
+Este ejemplo lee los datos del giroscopio en los ejes X, Y y Z.
+
 <pre><code>#include <Arduino.h>              // Librería de Arduino
 #include <GP94.h>                 // Librería local de la GP9
 
 GP9 imu(Serial);                  // Objeto del sensor GP9
 
 void setup() {
-  Serial.begin(115200);           //Inicializa Baudrate
+  Serial.begin(115200);           //Inicializa el Serial con el Baudrate deseado
 }
 
 void loop() {
@@ -108,4 +110,35 @@ void loop() {
     delay(1000);                  // Espera de 1 segundo entre lecturas
   }
 }</code></pre>
-    
+
+Primero se incluye la librería que se agregó localmente
+
+<pre><code>
+    #include <GP94.h>               
+</code></pre>
+
+Se crea el objeto imu
+
+<pre><code>
+    GP9 imu(Serial);               
+</code></pre>
+
+Inicializa el estado y el puerto serie. (La GP9 tiene este Baurate por default)
+
+<pre><code>
+    Serial.begin(115200);                
+</code></pre>
+
+Esta función determinará qué registro se está leyendo, la longitud del batch y llamará al checksum una vez que haya terminado. "decode()" devuelve true si se leyó correctamente un paquete.
+
+<pre><code>
+    imu.decode(Serial.read())              
+</code></pre>
+
+Se mandan a llamar las variables colocando el objeto imu. antes de cada variable.
+
+<pre><code>
+    Serial.print(imu.gyro_x); Serial.print(", "); // Datos inerciales
+    Serial.print(imu.gyro_y); Serial.print(", ");
+    Serial.println(imu.gyro_z);        
+</code></pre>

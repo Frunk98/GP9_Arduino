@@ -93,8 +93,8 @@ A continuación, se presenta una comparación entre las direcciones hexadecimale
 
 Este ejemplo lee los datos del giroscopio en los ejes X, Y y Z.
 
-<pre><code>#include <Arduino.h>              // Librería de Arduino
-#include <GP94.h>                 // Librería local de la GP9
+<pre><code>#include (Arduino.h)              // Librería de Arduino
+#include (GP94.h)                 // Librería local de la GP9
 
 GP9 imu(Serial);                  // Objeto del sensor GP9
 
@@ -113,7 +113,7 @@ void loop() {
 
 Primero se incluye la librería que se agregó localmente
 
-<pre><code>#include **<GP94.h>**            
+<pre><code>#include **(GP94.h)**            
 </code></pre>
 
 Se crea el objeto imu
@@ -133,7 +133,7 @@ Esta función determinará qué registro se está leyendo, la longitud del batch
 
 Se mandan a llamar las variables colocando el objeto imu. antes de cada variable.
 
-<pre><code>Serial.print(imu.gyro_x); Serial.print(", "); // Datos inerciales
-Serial.print(imu.gyro_y); Serial.print(", ");
+<pre><code>Serial.print(imu.gyro_x);
+Serial.print(imu.gyro_y); 
 Serial.println(imu.gyro_z);        
 </code></pre>

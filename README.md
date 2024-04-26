@@ -142,6 +142,7 @@ __**<p>La lista completa de variables se encuentra disponible <a href="https://g
 
 ## Resultados
 
-Como se puede apreciar en la imagen se leen los datos del giroscopio en los 3 ejes, una lectura por segundo.
+Como se puede observar en la imagen, se están leyendo los datos del giroscopio en los tres ejes, con una frecuencia de 1Hz.
 
 ![Resultados](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/Res.png)
+

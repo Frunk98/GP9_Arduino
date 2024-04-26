@@ -138,5 +138,5 @@ Serial.print(imu.gyro_y);
 Serial.println(imu.gyro_z);        
 </code></pre>
 
-<p>La lista completa de variables se encuentra disponible <a href="https://github.com/Frunk98/GP9_Arduino/blob/main/GP9-original/GP94.cpp">aquí</a>(Para revisar cuales son las variables que si lee el sensor checar la datasheet ).</p>
+<p>La lista completa de variables se encuentra disponible <a href="https://github.com/Frunk98/GP9_Arduino/blob/main/GP9-original/GP94.cpp">aquí</a>. Para revisar cuáles son las variables que efectivamente lee el sensor, consulta la <a href="https://github.com/Frunk98/GP9_Arduino/blob/main/Docs/GP9_datasheet.pdf">datasheet</a>.</p>
 

@@ -96,7 +96,8 @@ Este ejemplo lee los datos del giroscopio en los ejes X, Y y Z.
 <pre><code>#include (Arduino.h)              // Librería de Arduino
 #include (GP94.h)                 // Librería local de la GP9
 
-GP9 imu(Serial);                  // Objeto del sensor GP9
+HardwareSerial SerialObject(0); // Define a HardwareSerial object for Serial 0
+GP9 imu(SerialObject);           // Initialize the GP9 object with the SerialObject
 
 void setup() {
   Serial.begin(115200);           //Inicializa el Serial con el Baudrate deseado

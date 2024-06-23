@@ -46,9 +46,9 @@ A continuación, se presenta una comparación entre las direcciones hexadecimale
     </div>
 </div>
 <br>
-<pre><code>void GP9::save() {
+<pre>
+void GP9::save() {
   switch (address) {
-    <span class="highlight">
     case DREG_HEALTH :
         {
           sats_used = (uint8_t)((data[0] & 0xFC) >> 2);
@@ -63,8 +63,6 @@ A continuación, se presenta una comparación entre las direcciones hexadecimale
           gps = (uint8_t)(data[3] & 0x01);
         break;  
     }
-    </span>
-    <span class="highlight">
         case DREG_GYRO_RAW_XY:
         {
           gyro_raw_x = ((int16_t)data[0] << 8) + ((int16_t)data[1] << 8);
@@ -73,8 +71,6 @@ A continuación, se presenta una comparación entre las direcciones hexadecimale
           gyro_raw_time = read_register_as_float(6);
             break;
         }
-    </span>
-    <span class="highlight">
         case DREG_ACCEL_RAW_XY:
         {
               accel_raw_x = ((int16_t)data[0] << 8) + ((int16_t)data[1] << 8);
@@ -83,8 +79,7 @@ A continuación, se presenta una comparación entre las direcciones hexadecimale
           accel_raw_time = read_register_as_float(6);
             break;
         }
-    </span>
-}</code></pre>
+}</pre>
 <p style="text-align: center;">Código con las direcciones corregidas</p>
 
 <p>Se adjuntan también las bibliotecas originales. Las encontré en un repositorio para el sensor UM7, pero ya no sé cuál es. Si tú las escribiste y estás leyendo esto, contáctame para darte crédito. Puedes encontrarlas en este enlace: <a href="https://github.com/Frunk98/GP9_Arduino">GP9-Originales</a>. Las bibliotecas modificadas solo contienen los directorios y variables necesarias para mi proyecto.</p>
@@ -93,8 +88,9 @@ A continuación, se presenta una comparación entre las direcciones hexadecimale
 
 Este ejemplo lee los datos del giroscopio en los ejes X, Y y Z.
 
-<pre><code>#include (Arduino.h)              // Librería de Arduino
-#include (GP94.h)                 // Librería local de la GP9
+<pre>
+#include <Arduino.h>              // Librería de Arduino
+#include <GP94.h>                 // Librería local de la GP9
 
 HardwareSerial SerialObject(0); // Define a HardwareSerial object for Serial 0
 GP9 imu(SerialObject);           // Initialize the GP9 object with the SerialObject
@@ -110,34 +106,39 @@ void loop() {
     Serial.println(imu.gyro_z);
     delay(1000);                  // Espera de 1 segundo entre lecturas
   }
-}</code></pre>
+}</pre>
 
 Primero se incluye la librería que se agregó localmente
 
-<pre><code>#include **(GP94.h)**            
-</code></pre>
+<pre>
+#include <GP94.h>            
+</pre>
 
 Se crea el objeto imu
 
-<pre><code>GP9 imu(Serial);               
-</code></pre>
+<pre>
+GP9 imu(Serial);               
+</pre>
 
 Inicializa el estado y el puerto serie. (La GP9 tiene este Baurate por default)
 
-<pre><code>Serial.begin(115200);                
-</code></pre>
+<pre>
+Serial.begin(115200);                
+</pre>
 
 Esta función determinará qué registro se está leyendo, la longitud del batch y llamará al checksum una vez que haya terminado. "decode()" devuelve true si se leyó correctamente un paquete.
 
-<pre><code>imu.decode(Serial.read())              
-</code></pre>
+<pre>
+imu.decode(Serial.read())              
+</pre>
 
 Se mandan a llamar las variables colocando el objeto imu. antes de cada variable.
 
-<pre><code>Serial.print(imu.gyro_x);
+<pre>
+Serial.print(imu.gyro_x);
 Serial.print(imu.gyro_y); 
 Serial.println(imu.gyro_z);        
-</code></pre>
+</pre>
 
 __**<p>La lista completa de variables se encuentra disponible <a href="https://github.com/Frunk98/GP9_Arduino/blob/main/GP9-original/GP94.cpp">aquí</a>. Para revisar cuáles son las variables que efectivamente lee el sensor, consulta la <a href="https://github.com/Frunk98/GP9_Arduino/blob/main/Docs/GP9_datasheet.pdf">datasheet</a>.</p>**__
 
@@ -146,4 +147,3 @@ __**<p>La lista completa de variables se encuentra disponible <a href="https://g
 Como se puede observar en la imagen, se están leyendo los datos del giroscopio en los tres ejes, con una frecuencia de 1Hz.
 
 ![Resultados](https://github.com/Frunk98/GP9_Arduino/blob/main/Imagenes/Res.png)
-

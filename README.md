@@ -82,7 +82,8 @@ void GP9::save() {
 }</pre>
 <p style="text-align: center;">Código con las direcciones corregidas</p>
 
-<p>Se adjuntan también las bibliotecas originales. Las encontré en un repositorio para el sensor UM7, pero ya no sé cuál es. Si tú las escribiste y estás leyendo esto, contáctame para darte crédito. Puedes encontrarlas en este enlace: <a href="https://github.com/Frunk98/GP9_Arduino">GP9-Originales</a>. Las bibliotecas modificadas solo contienen los directorios y variables necesarias para mi proyecto.</p>
+<p>Se adjuntan también las bibliotecas originales.
+Puedes encontrarlas en este enlace: <a href="https://github.com/Frunk98/GP9_Arduino">GP9-Originales</a>. Las bibliotecas modificadas solo contienen los directorios y variables necesarias para mi proyecto.</p>
 
 ## Ejemplos
 
